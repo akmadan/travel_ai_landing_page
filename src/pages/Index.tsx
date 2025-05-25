@@ -25,7 +25,7 @@ const Index = () => {
       icon: Luggage,
       title: "Local Hidden Gems",
       description: "Access exclusive local insights and discover authentic experiences recommended by fellow travelers.",
-      image: "https://images.unsplash.com/photo-1493707553966-283afb57c298?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1473951574080-01fe45ec8643?q=80&w=3304&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 
@@ -34,7 +34,7 @@ const Index = () => {
       name: "Sarah",
       location: "Berlin",
       text: "WanderLustify saved me hours of planning! Found the most amazing local spots in Prague.",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       name: "Marco",
