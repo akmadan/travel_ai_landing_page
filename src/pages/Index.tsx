@@ -50,6 +50,33 @@ const Index = () => {
     }
   ];
 
+  const faqData = [
+    {
+      q: "What is WanderLustify?",
+      a: "WanderLustify is a comprehensive travel planning and exploration app designed for European travelers. It provides interactive travel maps, smart itinerary builders, and local hidden gems features to make your European adventure effortless and exciting."
+    },
+    {
+      q: "How does the Smart Itinerary Builder work?",
+      a: "The Smart Itinerary Builder uses AI to analyze your travel preferences, interests, and dates to create personalized trip plans. It suggests optimal routes, activities, and accommodations based on your criteria, saving you countless hours of research."
+    },
+    {
+      q: "Can I customize my travel plans with WanderLustify?",
+      a: "Absolutely! WanderLustify offers extensive customization options. You can filter destinations by type (city, beach, mountain, etc.), set travel dates, and adjust preferences for activities, accommodations, and transportation. The app adapts to your needs."
+    },
+    {
+      q: "Is the app free to use?",
+      a: "Yes, WanderLustify is completely free to use. You can access all its features without any subscription fees. We believe in democratizing travel planning and making it accessible to everyone."
+    },
+    {
+      q: "How accurate are the travel recommendations?",
+      a: "Our travel recommendations are powered by a sophisticated algorithm that considers user ratings, location popularity, and expert insights. While we strive for accuracy, individual experiences may vary."
+    },
+    {
+      q: "Can I save my favorite travel spots?",
+      a: "Yes, you can save your favorite travel spots and create custom itineraries. WanderLustify allows you to bookmark places you're interested in, making it easy to revisit and plan your trip."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -274,6 +301,35 @@ const Index = () => {
                 className="h-12"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about our self-guided audio tours and the WanderLustify app.
+            </p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqData.map((faq, idx) => (
+              <details key={idx} className="group border border-gray-200 rounded-xl p-6 bg-gray-50">
+                <summary className="flex items-center justify-between cursor-pointer text-lg font-semibold text-gray-800 group-open:text-green-600">
+                  {faq.q}
+                  <span className="ml-4 transition-transform duration-300 group-open:rotate-180">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                  </span>
+                </summary>
+                <div className="mt-4 text-gray-700 leading-relaxed whitespace-pre-line">
+                  {faq.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
