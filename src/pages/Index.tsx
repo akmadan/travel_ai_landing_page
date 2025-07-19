@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { MapPin, Plane, Luggage } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [email, setEmail] = useState("");
@@ -394,6 +395,12 @@ const Index = () => {
                 <div>Blog</div>
                 <div>Careers</div>
                 <div>Contact</div>
+                <div>
+                  <Link to="/privacy" className="hover:underline text-gray-400">Privacy Policy</Link>
+                </div>
+                <div>
+                  <Link to="/terms" className="hover:underline text-gray-400">Terms & Conditions</Link>
+                </div>
               </div>
             </div>
             
