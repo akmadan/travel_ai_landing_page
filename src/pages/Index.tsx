@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { MapPin, Plane, Luggage } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -13,7 +14,7 @@ const Index = () => {
     {
       icon: MapPin,
       title: "Interactive Travel Maps",
-      description: "Discover Europe's hidden gems with our interactive map featuring curated travel nodes and popular destinations.",
+      description: "Discover hidden gems with our interactive map featuring curated travel nodes and popular destinations.",
       image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -25,7 +26,7 @@ const Index = () => {
     {
       icon: Luggage,
       title: "Local Hidden Gems",
-      description: "Access exclusive local insights and discover authentic experiences recommended by fellow travelers.",
+      description: "Access exclusive local insights and discover authentic experiences guided by Smart AI Agent.",
       image: "https://images.unsplash.com/photo-1473951574080-01fe45ec8643?q=80&w=3304&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
@@ -54,7 +55,7 @@ const Index = () => {
   const faqData = [
     {
       q: "What is WanderLustify?",
-      a: "WanderLustify is a comprehensive travel planning and exploration app designed for European travelers. It provides interactive travel maps, smart itinerary builders, and local hidden gems features to make your European adventure effortless and exciting."
+      a: "WanderLustify is a comprehensive travel planning and exploration app designed for enthusiastic travelers. It provides interactive travel maps, smart itinerary builders, and local hidden gems features to make your adventure effortless and exciting."
     },
     {
       q: "How does the Smart Itinerary Builder work?",
@@ -90,36 +91,39 @@ const Index = () => {
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-tight">
                   Plan Your Perfect 
-                  <span className="text-green-500 block">European Adventure</span>
-                  <span className="text-3xl lg:text-4xl font-medium text-gray-600">—Effortlessly.</span>
+                  <span className="text-green-500 block">Adventure</span>
+                  <span className="text-3xl lg:text-4xl font-medium text-gray-600">Effortlessly.</span>
                 </h1>
                 
                 <p className="text-xl text-gray-600 max-w-lg">
                   Smart itineraries, local insights, and seamless travel planning in one app. 
-                  Your next European journey starts here.
+                  Your next journey starts here.
                 </p>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="bg-green-500 hover:bg-green-600 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-                >
-                  Download Now – Free Forever
-                </Button>
-                
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-green-500 text-green-500 hover:bg-green-50 px-8 py-6 text-lg rounded-full transition-all duration-300"
-                >
-                  Watch Demo
-                </Button>
-              </div>
-
-              <div className="flex items-center gap-4 text-sm text-gray-500">
-                <Badge variant="secondary" className="bg-green-100 text-green-700">4.8★ Rating</Badge>
-                <span>50,000+ Happy Travelers</span>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button 
+                      size="lg" 
+                      className="bg-green-500 hover:bg-green-600 text-white px-16 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 min-w-[260px]"
+                    >
+                      Watch Demo
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl w-full p-0 bg-black">
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <iframe
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/videoseries?list=PLS1UfsrO_gbwZgpGJqK8Pefv-1xY4Mxzd"
+                        title="WanderLustify Demo"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
 
@@ -127,7 +131,7 @@ const Index = () => {
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Young travelers exploring European city"
+                  alt="Young travelers exploring a city"
                   className="w-full h-[600px] object-cover"
                 />
               </div>
@@ -157,7 +161,7 @@ const Index = () => {
               Everything You Need for the Perfect Trip
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From planning to exploring, WanderLustify makes European travel effortless and exciting
+              From planning to exploring, WanderLustify makes travel effortless and exciting
             </p>
           </div>
 
@@ -192,14 +196,14 @@ const Index = () => {
       {/* Interactive Map Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid gap-12 items-center justify-center mx-auto" style={{ maxWidth: '1100px' }}>
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Step-by-Step Navigation
               </h2>
               <p className="text-xl text-gray-600 mb-8">
                 Never get lost again with our intuitive walking directions and real-time navigation 
-                designed specifically for European cities.
+                and AI powered Agent to guide you through your journey.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
@@ -214,39 +218,19 @@ const Index = () => {
                   <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-semibold">3</div>
                   <span className="text-gray-700">Discover hidden gems along the way</span>
                 </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-3xl p-8 text-white">
-                <div className="bg-white rounded-2xl p-6 text-gray-900">
-                  <h3 className="font-semibold mb-4">Sample Itinerary: Amsterdam</h3>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-green-500" />
-                      <span>Anne Frank House - 9:00 AM</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-green-500" />
-                      <span>Jordaan District Walk - 11:00 AM</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-green-500" />
-                      <span>Local Café Lunch - 1:00 PM</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-4 h-4 text-green-500" />
-                      <span>Vondelpark - 3:00 PM</span>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-semibold">4</div>
+                  <span className="text-gray-700">Interact with an AI agent as your guide, simply with your voice</span>
                 </div>
               </div>
             </div>
+            
+            
           </div>
         </div>
       </section>
 
-      {/* Social Proof Section */}
+      {/* Social Proof Section
       <section className="py-20 bg-green-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -304,10 +288,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-green-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -368,17 +352,17 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-black text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
+        <div className="container mx-auto px-12">
+          <div className="grid md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-2xl font-bold text-green-500 mb-4">WanderLustify</h3>
               <p className="text-gray-400">
-                Your perfect European adventure starts here. Smart planning, local insights, 
+                Your perfect adventure starts here. Smart planning, local insights, 
                 endless possibilities.
               </p>
             </div>
             
-            <div>
+            {/* <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <div className="space-y-2 text-gray-400">
                 <div>Features</div>
@@ -386,15 +370,15 @@ const Index = () => {
                 <div>Download</div>
                 <div>Support</div>
               </div>
-            </div>
+            </div> */}
             
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <div className="space-y-2 text-gray-400">
-                <div>About</div>
+                {/* <div>About</div>
                 <div>Blog</div>
                 <div>Careers</div>
-                <div>Contact</div>
+                <div>Contact</div> */}
                 <div>
                   <Link to="/privacy" className="hover:underline text-gray-400">Privacy Policy</Link>
                 </div>
@@ -404,7 +388,7 @@ const Index = () => {
               </div>
             </div>
             
-            <div>
+            {/* <div>
               <h4 className="font-semibold mb-4">Follow Us</h4>
               <div className="space-y-2 text-gray-400">
                 <div>Instagram</div>
@@ -412,11 +396,11 @@ const Index = () => {
                 <div>Facebook</div>
                 <div>TikTok</div>
               </div>
-            </div>
+            </div> */}
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 WanderLustify. All rights reserved. Made with ❤️ for European adventurers.</p>
+            <p>&copy; 2025 WanderLustify. All rights reserved. Made with ❤️ for all adventurers.</p>
           </div>
         </div>
       </footer>
