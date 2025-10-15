@@ -115,7 +115,7 @@ const Index = () => {
                     <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                       <iframe
                         className="absolute top-0 left-0 w-full h-full"
-                        src="https://youtu.be/jnboUlGGYAk?si=ZnhwLx81tBv3Kk9d"
+                        src="https://www.youtube.com/embed/jnboUlGGYAk?si=ftgpTnLIEXFHelWT"
                         title="WanderLustify Demo"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
